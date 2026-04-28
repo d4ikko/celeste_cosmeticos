@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reina Indómita</title>
+    <link rel="stylesheet" href="stylr.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Reina Indómita</h1>
+        <ul>
+            <li>Inicio</li>
+            <li>Productos</li>
+            <li>Servicios</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+    <!-- HERO CON SLIDER -->
+    <section class="hero">
+        <div class="slider">
+
+            <div class="slide active">
+                <img src="img1.jpg" alt="">
+                <div class="texto">
+                    <h2>Realza tu belleza</h2>
+                    <p>Siempre la más, nunca la menos</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img2.jpg" alt="">
+                <div class="texto">
+                    <h2>Productos únicos</h2>
+                    <p>Calidad que destaca</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img3.jpg" alt="">
+                <div class="texto">
+                    <h2>Brilla siempre</h2>
+                    <p>Confianza y estilo</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+        
+        <div>💰 Garantía asegurada</div>
+        <div>⭐ Productos premium</div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos">
+        <h2>Productos destacados</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/150">
+                <h3>Base líquida</h3>
+                <p>$12.000</p>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/150">
+                <h3>Labial matte</h3>
+                <p>$8.000</p>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/150">
+                <h3>Sombras</h3>
+                <p>$15.000</p>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/150">
+                <h3>Iluminador</h3>
+                <p>$10.000</p>
+                <button>Agregar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT DEL SLIDER -->
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let index = 0;
+
+        function cambiarSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+
+        setInterval(cambiarSlide, 3000);
+    </script>
+
+</body>
+</html>

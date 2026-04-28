@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7e6;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff8c00, #ffcc00);
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.hero {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+}
+
+.hero button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #ffe0b3;
+}
+
+
+.productos {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card button {
+    background: #ff8c00;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
