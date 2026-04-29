@@ -5,9 +5,10 @@
     <title>Reina Indómita</title>
     <link rel="stylesheet" href="stylr.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
+    
     <nav>
         <h1>Reina Indómita</h1>
         <ul>
@@ -18,91 +19,101 @@
         </ul>
     </nav>
 
-    <!-- HERO CON SLIDER -->
+
     <section class="hero">
-        <div class="slider">
-
-            <div class="slide active">
-                <img src="img1.jpg" alt="">
-                <div class="texto">
-                    <h2>Realza tu belleza</h2>
-                    <p>Siempre la más, nunca la menos</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="img2.jpg" alt="">
-                <div class="texto">
-                    <h2>Productos únicos</h2>
-                    <p>Calidad que destaca</p>
-                </div>
-            </div>
-
-            <div class="slide">
-                <img src="img3.jpg" alt="">
-                <div class="texto">
-                    <h2>Brilla siempre</h2>
-                    <p>Confianza y estilo</p>
-                </div>
-            </div>
-
+        <div class="hero-contenido">
+            <h2>Realza tu belleza</h2>
+            <p>Siempre la más, nunca la menos</p>
+            <button>Comprar ahora</button>
         </div>
     </section>
 
-    <!-- BENEFICIOS -->
+    
     <section class="benefits">
-        
         <div>💰 Garantía asegurada</div>
         <div>⭐ Productos premium</div>
     </section>
 
-    <!-- PRODUCTOS -->
+
+    <section class="nosotros">
+        <h2>Nosotros</h2>
+        <p>Productos de calidad para mantener la belleza facial y corporal</p>
+    </section>
+
     <section class="productos">
         <h2>Productos destacados</h2>
 
         <div class="grid">
+
             <div class="card">
-                <img src="https://via.placeholder.com/150">
-                <h3>Base líquida</h3>
-                <p>$12.000</p>
-                <button>Agregar</button>
+                <span class="badge">Nuevo</span>
+                <img src="crema corporal.jpg">
+                <h3>crema corporal - luckylily</h3>
+                <p class="precio">$12.000</p>
+                <button class="disponible" onclick="comprar('Base líquida')">Disponible</button>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/150">
+                <span class="badge">Top</span>
+                <img src="exfoliante.jpg">
                 <h3>Labial matte</h3>
-                <p>$8.000</p>
-                <button>Agregar</button>
+                <p class="precio">$8.000</p>
+                <button class="disponible" onclick="comprar('Labial matte')">Disponible</button>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/150">
+                <img src="https://via.placeholder.com/200">
                 <h3>Sombras</h3>
-                <p>$15.000</p>
-                <button>Agregar</button>
+                <p class="precio">$15.000</p>
+                <button class="disponible" onclick="comprar('Sombras')">Disponible</button>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/150">
+                <img src="https://via.placeholder.com/200">
                 <h3>Iluminador</h3>
-                <p>$10.000</p>
-                <button>Agregar</button>
+                <p class="precio">$10.000</p>
+                <button class="disponible" onclick="comprar('Iluminador')">Disponible</button>
             </div>
+
+            <div class="card">
+                <img src="serum capilar.jpg">
+                <h3>Serum capilar</h3>
+                <p class="precio">$9.000</p>
+                <button class="disponible" onclick="comprar('Serum capilar')">Disponible</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200">
+                <h3>Crema facial</h3>
+                <p class="precio">$11.000</p>
+                <button class="disponible" onclick="comprar('Crema facial')">Disponible</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200">
+                <h3>Perfume</h3>
+                <p class="precio">$18.000</p>
+                <button class="disponible" onclick="comprar('Perfume')">Disponible</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/200">
+                <h3>Protector solar</h3>
+                <p class="precio">$13.000</p>
+                <button class="disponible" onclick="comprar('Protector solar')">Disponible</button>
+            </div>
+
         </div>
     </section>
 
-    <!-- SCRIPT DEL SLIDER -->
     <script>
-        let slides = document.querySelectorAll(".slide");
-        let index = 0;
+        function comprar(producto) {
+            let numero = "+56 9 9308 2434"; 
+            let mensaje = "Hola, quiero el producto: " + producto;
 
-        function cambiarSlide() {
-            slides[index].classList.remove("active");
-            index = (index + 1) % slides.length;
-            slides[index].classList.add("active");
+            let url = "https://chat.whatsapp.com/ERYmSLzwevD9XvE6qBCV2W" + numero + "?text=" + encodeURIComponent(mensaje);
+            window.open(url, "_blank");
         }
-
-        setInterval(cambiarSlide, 3000);
     </script>
 
 </body>
